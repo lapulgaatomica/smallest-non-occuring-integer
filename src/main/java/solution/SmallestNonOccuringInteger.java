@@ -1,10 +1,15 @@
-# smallest-non-occuring-integer
-a simple and efficient Java program that returns the smallest non-occurring integer in a given Array
+package solution;
 
-The solution to the challenge can be found in the solution package, the method name is `smallestNonOccuringInteger`
+import java.util.Set;
+import java.util.TreeSet;
 
-```
-public static int smallestNonOccuringInteger(int[] array){
+public class SmallestNonOccuringInteger {
+    public static void main(String[] args) {
+        System.out.println(smallestNonOccuringInteger(new int[]{1, 3, 6, 4, 1, 2}));
+        System.out.println(smallestNonOccuringInteger(new int[]{5, -1, -3}));
+    }
+
+    public static int smallestNonOccuringInteger(int[] array){
         Set<Integer> setOfPositiveIntegers = new TreeSet<>();
         //The elements inserted into a tree set ordered using their natural ordering, or by a Comparator provided at set creation time,
 
@@ -22,4 +27,4 @@ public static int smallestNonOccuringInteger(int[] array){
 
         return 0;
     }
-```
+}
